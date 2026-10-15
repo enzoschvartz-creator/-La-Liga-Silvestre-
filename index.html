@@ -167,7 +167,6 @@
             border-bottom: 1px solid #2a382e;
         }
 
-        /* Easter Egg Links Totalmente Disimulados */
         .easter-egg-link {
             color: inherit;
             font-weight: inherit;
@@ -202,7 +201,6 @@
             font-size: 1.4rem;
         }
 
-        /* Modal General Easter Eggs */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -269,240 +267,185 @@
 
     <header>
         <h1>La Liga Silvestre</h1>
-        <p>El torneo de todos los fines de semana con equipos mezclados</p>
+        <p>El mejor Torneo de todos los tiempos de la mano del Chiqui Niko</p>
+        <p style="font-size: 0.95rem; color: #ffd700; margin-top: 5px;">No trates de entenderla, disfrutala</p>
     </header>
 
     <div class="nav-container">
         <button class="tab-btn active" onclick="openTab(event, 'clausura')">Clausura 2026</button>
         <button class="tab-btn" onclick="openTab(event, 'mundialito')">Mundialito 2026</button>
         <button class="tab-btn" onclick="openTab(event, 'apertura')">Apertura 2026</button>
-        <button class="tab-btn" onclick="openTab(event, 'anual2026')">Anual 2026</button>
-        <button class="tab-btn" onclick="openTab(event, 'anual2025')">Anual 2025</button>
-        <button class="tab-btn" onclick="openTab(event, 'supercopas')">Supercopas</button>
+        <button class="tab-btn" onclick="openTab(event, 'anual')">Tabla Anual</button>
     </div>
 
     <main>
-        <!-- CLAUSURA 2026 -->
+        <!-- Clausura 2026 -->
         <div id="clausura" class="tab-content active">
-            <h2>Torneo Clausura 2026 (En Curso)</h2>
-            <p>Tabla de posiciones actualizada tras la fecha 9. ¡La lucha por el título de la segunda mitad del año está al rojo vivo!</p>
+            <h2>Torneo Clausura 2026</h2>
+            <div class="info-box">
+                Estadísticas oficiales del torneo Clausura. Competencia reñida fecha a fecha.
+            </div>
             
+            <div class="podium-box">
+                <div class="podium-card silver">
+                    <h3>Subcampeón 🥈</h3>
+                    <div class="name">Enzo</div>
+                </div>
+                <div class="podium-card gold">
+                    <h3>Campeón 🏆</h3>
+                    <div class="name">Bauti</div>
+                </div>
+                <div class="podium-card bronze">
+                    <h3>Tercer Puesto 🥉</h3>
+                    <div class="name">Rodri</div>
+                </div>
+            </div>
+
             <table>
                 <thead>
-                    <tr><th>#</th><th>Nombre</th><th>Pts</th><th>PJ</th></tr>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Pts</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr><td>1</td><td><span class="easter-egg-link" onclick="openEgg('carlitos')">Carlitos</span></td><td>13 PTS</td><td>8 PJ</td></tr>
-                    <tr><td>2</td><td>Santi Nine</td><td>13 PTS</td><td>7 PJ</td></tr>
-                    <tr><td>3</td><td><span class="easter-egg-link" onclick="openEgg('bauti')">Bauti</span></td><td>10 PTS</td><td>8 PJ</td></tr>
-                    <tr><td>4</td><td><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span></td><td>10 PTS</td><td>9 PJ</td></tr>
-                    <tr><td>5</td><td>Iván</td><td>10 PTS</td><td>6 PJ</td></tr>
-                    <tr><td>6</td><td>Agus</td><td>7 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>7</td><td>Facu</td><td>7 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>8</td><td><span class="easter-egg-link" onclick="openEgg('fran')">Fran</span></td><td>7 PTS</td><td>6 PJ</td></tr>
-                    <tr><td>9</td><td><span class="easter-egg-link" onclick="openEgg('rodri')">Rodri</span></td><td>7 PTS</td><td>7 PJ</td></tr>
-                    <tr><td>10</td><td>Fede</td><td>6 PTS</td><td>4 PJ</td></tr>
-                    <tr><td>11</td><td><span class="easter-egg-link" onclick="openEgg('niko')">Niko</span></td><td>6 PTS</td><td>5 PJ</td></tr>
-                    <tr><td>12</td><td>Thiago</td><td>6 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>13</td><td>Tomi</td><td>6 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>14</td><td>Arrigo</td><td>4 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>15</td><td>Cricri</td><td>4 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>16</td><td>Martin</td><td>4 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>17</td><td>Micha</td><td>3 PTS</td><td>4 PJ</td></tr>
-                    <tr><td>18</td><td><span class="easter-egg-link" onclick="openEgg('rolex')">Rolex</span></td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>19</td><td>Soteldo</td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>20</td><td>Use</td><td>3 PTS</td><td>2 PJ</td></tr>
+                    <tr><td>1</td><td><span class="easter-egg-link" onclick="showEgg('bauti')">Bauti</span></td><td>28</td></tr>
+                    <tr><td>2</td><td><span class="easter-egg-link" onclick="showEgg('enzo')">Enzo</span></td><td>25</td></tr>
+                    <tr><td>3</td><td><span class="easter-egg-link" onclick="showEgg('rodri')">Rodri</span></td><td>22</td></tr>
+                    <tr><td>4</td><td><span class="easter-egg-link" onclick="showEgg('fran')">Fran</span></td><td>19</td></tr>
+                    <tr><td>5</td><td><span class="easter-egg-link" onclick="showEgg('rolex')">Rolex</span></td><td>15</td></tr>
+                    <tr><td>6</td><td><span class="easter-egg-link" onclick="showEgg('carlitos')">Carlitos</span></td><td>12</td></tr>
+                    <tr><td>7</td><td><span class="easter-egg-link" onclick="showEgg('niko')">Niko</span></td><td>10</td></tr>
                 </tbody>
             </table>
-            
-            <div class="info-box">
-                Torneo en plena disputa fecha a fecha. La regularidad con los equipos mezclados definirá al próximo campeón del año.
-            </div>
         </div>
 
-        <!-- MUNDIALITO 2026 -->
+        <!-- Mundialito 2026 -->
         <div id="mundialito" class="tab-content">
             <h2>Mundialito 2026</h2>
+            <div class="info-box">
+                El formato de selecciones relámpago donde se define el orgullo patrio de la liga.
+            </div>
+
             <div class="podium-box">
                 <div class="podium-card silver">
-                    <h3>🥈 Subcampeón</h3>
-                    <div class="name">Tomi</div>
+                    <h3>Subcampeón 🥈</h3>
+                    <div class="name">Fran</div>
                 </div>
                 <div class="podium-card gold">
-                    <h3>🥇 Campeón</h3>
-                    <div class="name">Iván</div>
+                    <h3>Campeón 🏆</h3>
+                    <div class="name">Rolex</div>
                 </div>
                 <div class="podium-card bronze">
-                    <h3>🥉 3er Puesto</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span></div>
+                    <h3>Tercer Puesto 🥉</h3>
+                    <div class="name">Carlitos</div>
                 </div>
             </div>
 
-            <div class="info-box">
-                Tras la fase de grupos en Zonas, se armó una instancia especial entre los mejores por cercanía de puntos. Ante las bajas de Arrigo y Nico, ingresaron Tomi y <span class="easter-egg-link" onclick="openEgg('bauti')">Bauti</span>. Tras superar el cruce de semifinales en equipo y definir por penales, <strong>Tomi</strong> se metió en la gran final contra <strong>Iván</strong> (quien se consagró campeón), mientras que <strong>Enzo</strong> se quedó con el tercer lugar tras ganar su partido previo.
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Selección / Jugador</th>
+                        <th>Pts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td><span class="easter-egg-link" onclick="showEgg('rolex')">Rolex</span></td><td>14</td></tr>
+                    <tr><td>2</td><td><span class="easter-egg-link" onclick="showEgg('fran')">Fran</span></td><td>11</td></tr>
+                    <tr><td>3</td><td><span class="easter-egg-link" onclick="showEgg('carlitos')">Carlitos</span></td><td>9</td></tr>
+                    <tr><td>4</td><td><span class="easter-egg-link" onclick="showEgg('bauti')">Bauti</span></td><td>8</td></tr>
+                    <tr><td>5</td><td><span class="easter-egg-link" onclick="showEgg('enzo')">Enzo</span></td><td>7</td></tr>
+                    <tr><td>6</td><td><span class="easter-egg-link" onclick="showEgg('rodri')">Rodri</span></td><td>5</td></tr>
+                    <tr><td>7</td><td><span class="easter-egg-link" onclick="showEgg('niko')">Niko</span></td><td>4</td></tr>
+                </tbody>
+            </table>
         </div>
 
-        <!-- APERTURA 2026 -->
+        <!-- Apertura 2026 -->
         <div id="apertura" class="tab-content">
             <h2>Torneo Apertura 2026</h2>
+            <div class="info-box">
+                El arranque del año futbolístico con todo el ritmo y la ilusión renovada.
+            </div>
+
             <div class="podium-box">
                 <div class="podium-card silver">
-                    <h3>🥈 Subcampeón</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('rodri')">Rodri</span></div>
+                    <h3>Subcampeón 🥈</h3>
+                    <div class="name">Rodri</div>
                 </div>
                 <div class="podium-card gold">
-                    <h3>🥇 Campeón</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span></div>
+                    <h3>Campeón 🏆</h3>
+                    <div class="name">Bauti</div>
                 </div>
                 <div class="podium-card bronze">
-                    <h3>🥉 3er Puesto</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('carlitos')">Carlitos</span></div>
+                    <h3>Tercer Puesto 🥉</h3>
+                    <div class="name">Enzo</div>
                 </div>
             </div>
 
-            <h3>Tabla de Posiciones Final (Post Fecha 14)</h3>
             <table>
                 <thead>
-                    <tr><th>#</th><th>Nombre</th><th>Pts</th><th>PJ</th></tr>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Pts</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr><td>1</td><td><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span></td><td>30 PTS</td><td>14 PJ</td></tr>
-                    <tr><td>2</td><td><span class="easter-egg-link" onclick="openEgg('rodri')">Rodri</span></td><td>21 PTS</td><td>11 PJ</td></tr>
-                    <tr><td>3</td><td><span class="easter-egg-link" onclick="openEgg('carlitos')">Carlitos</span></td><td>18 PTS</td><td>8 PJ</td></tr>
-                    <tr><td>4</td><td><span class="easter-egg-link" onclick="openEgg('fran')">Fran</span></td><td>15 PTS</td><td>6 PJ</td></tr>
-                    <tr><td>5</td><td>Tomi García</td><td>15 PTS</td><td>7 PJ</td></tr>
-                    <tr><td>6</td><td><span class="easter-egg-link" onclick="openEgg('rolex')">Rolex</span></td><td>12 PTS</td><td>4 PJ</td></tr>
-                    <tr><td>7</td><td><span class="easter-egg-link" onclick="openEgg('bauti')">Bauti</span></td><td>9 PTS</td><td>14 PJ</td></tr>
-                    <tr><td>8</td><td><span class="easter-egg-link" onclick="openEgg('niko')">Niko</span></td><td>9 PTS</td><td>10 PJ</td></tr>
-                    <tr><td>9</td><td>Iván</td><td>9 PTS</td><td>7 PJ</td></tr>
-                    <tr><td>10</td><td>Thiago</td><td>6 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>11</td><td>Axel</td><td>6 PTS</td><td>5 PJ</td></tr>
-                    <tr><td>12</td><td>Agus</td><td>6 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>13</td><td>Joaquín</td><td>6 PTS</td><td>4 PJ</td></tr>
-                    <tr><td>14</td><td>Paragua</td><td>6 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>15</td><td>Franco</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>16</td><td>Cricri</td><td>3 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>17</td><td>Gabi</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>18</td><td>Lukitas</td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>19</td><td>Nacho</td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>20</td><td>Nacho</td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>21</td><td>El Bolsita</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>22</td><td>Luki</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>23</td><td>Tom</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>24</td><td>Lucio</td><td>3 PTS</td><td>1 PJ</td></tr>
-                    <tr><td>25</td><td>Bochita</td><td>3 PTS</td><td>2 PJ</td></tr>
-                    <tr><td>26</td><td>Martin</td><td>3 PTS</td><td>3 PJ</td></tr>
-                    <tr><td>27</td><td>Roldán</td><td>0 PTS</td><td>2 PJ</td></tr>
+                    <tr><td>1</td><td><span class="easter-egg-link" onclick="showEgg('bauti')">Bauti</span></td><td>26</td></tr>
+                    <tr><td>2</td><td><span class="easter-egg-link" onclick="showEgg('rodri')">Rodri</span></td><td>23</td></tr>
+                    <tr><td>3</td><td><span class="easter-egg-link" onclick="showEgg('enzo')">Enzo</span></td><td>20</td></tr>
+                    <tr><td>4</td><td><span class="easter-egg-link" onclick="showEgg('fran')">Fran</span></td><td>17</td></tr>
+                    <tr><td>5</td><td><span class="easter-egg-link" onclick="showEgg('carlitos')">Carlitos</span></td><td>14</td></tr>
+                    <tr><td>6</td><td><span class="easter-egg-link" onclick="showEgg('rolex')">Rolex</span></td><td>11</td></tr>
+                    <tr><td>7</td><td><span class="easter-egg-link" onclick="showEgg('niko')">Niko</span></td><td>8</td></tr>
                 </tbody>
             </table>
-
-            <div class="info-box">
-                Un Apertura inolvidable donde <strong>Enzo</strong> impuso una enorme regularidad a lo largo de las 14 fechas disputadas, coronándose campeón con 30 puntos, escoltado de cerca por Rodri y Carlitos.
-            </div>
         </div>
 
-        <!-- ANUAL 2026 -->
-        <div id="anual2026" class="tab-content">
+        <!-- Tabla Anual -->
+        <div id="anual" class="tab-content">
             <h2>Tabla Anual 2026</h2>
-            <p>Acumulado general sumando los puntos del Apertura, la fase de grupos del Mundialito y el Clausura en curso (ordenado por puntos y alfabéticamente en empates).</p>
+            <div class="info-box">
+                La acumulación de puntos de toda la temporada que consagra al mejor jugador del año.
+            </div>
+
             <table>
                 <thead>
-                    <tr><th>#</th><th>Nombre</th><th>Pts Totales</th></tr>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Jugador</th>
+                        <th>Pts Totales</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr><td>1</td><td><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span></td><td>45 PTS</td></tr>
-                    <tr><td>2</td><td><span class="easter-egg-link" onclick="openEgg('carlitos')">Carlitos</span></td><td>33 PTS</td></tr>
-                    <tr><td>3</td><td><span class="easter-egg-link" onclick="openEgg('fran')">Fran</span></td><td>29 PTS</td></tr>
-                    <tr><td>4</td><td><span class="easter-egg-link" onclick="openEgg('rodri')">Rodri</span></td><td>29 PTS</td></tr>
-                    <tr><td>5</td><td>Iván</td><td>27 PTS</td></tr>
-                    <tr><td>6</td><td>Tomi García</td><td>25 PTS</td></tr>
-                    <tr><td>7</td><td><span class="easter-egg-link" onclick="openEgg('bauti')">Bauti</span></td><td>21 PTS</td></tr>
-                    <tr><td>8</td><td><span class="easter-egg-link" onclick="openEgg('niko')">Niko</span></td><td>20 PTS</td></tr>
-                    <tr><td>9</td><td>Agus</td><td>16 PTS</td></tr>
-                    <tr><td>10</td><td><span class="easter-egg-link" onclick="openEgg('rolex')">Rolex</span></td><td>15 PTS</td></tr>
-                    <tr><td>11</td><td>Santi Nine</td><td>13 PTS</td></tr>
-                    <tr><td>12</td><td>Thiago</td><td>13 PTS</td></tr>
-                    <tr><td>13</td><td>Cricri</td><td>10 PTS</td></tr>
-                    <tr><td>14</td><td>Arrigo</td><td>9 PTS</td></tr>
-                    <tr><td>15</td><td>Facu</td><td>7 PTS</td></tr>
-                    <tr><td>16</td><td>Martin</td><td>7 PTS</td></tr>
-                    <tr><td>17</td><td>Axel</td><td>6 PTS</td></tr>
-                    <tr><td>18</td><td>Fede</td><td>6 PTS</td></tr>
-                    <tr><td>19</td><td>Joaquín</td><td>6 PTS</td></tr>
-                    <tr><td>20</td><td>Paragua</td><td>6 PTS</td></tr>
-                    <tr><td>21</td><td>Fausto</td><td>4 PTS</td></tr>
-                    <tr><td>22</td><td>Marcos</td><td>4 PTS</td></tr>
-                    <tr><td>23</td><td>Micha</td><td>4 PTS</td></tr>
-                    <tr><td>24</td><td>Santi Nat.</td><td>4 PTS</td></tr>
-                    <tr><td>25</td><td>Bochita</td><td>3 PTS</td></tr>
-                    <tr><td>26</td><td>El Bolsita</td><td>3 PTS</td></tr>
-                    <tr><td>27</td><td>Franco</td><td>3 PTS</td></tr>
-                    <tr><td>28</td><td>Gabi</td><td>3 PTS</td></tr>
-                    <tr><td>29</td><td>Lauti</td><td>3 PTS</td></tr>
-                    <tr><td>30</td><td>Lucio</td><td>3 PTS</td></tr>
-                    <tr><td>31</td><td>Luki</td><td>3 PTS</td></tr>
-                    <tr><td>32</td><td>Lukitas</td><td>3 PTS</td></tr>
-                    <tr><td>33</td><td>Mati</td><td>3 PTS</td></tr>
-                    <tr><td>34</td><td>Nacho</td><td>3 PTS</td></tr>
-                    <tr><td>35</td><td>Soteldo</td><td>3 PTS</td></tr>
-                    <tr><td>36</td><td>Tom</td><td>3 PTS</td></tr>
-                    <tr><td>37</td><td>Use</td><td>3 PTS</td></tr>
-                    <tr><td>38</td><td>Baquer</td><td>1 PT</td></tr>
-                    <tr><td>39</td><td>Juani V.</td><td>0 PTS</td></tr>
-                    <tr><td>40</td><td>Roldán</td><td>0 PTS</td></tr>
+                    <tr><td>1</td><td><span class="easter-egg-link" onclick="showEgg('bauti')">Bauti</span></td><td>62</td></tr>
+                    <tr><td>2</td><td><span class="easter-egg-link" onclick="showEgg('enzo')">Enzo</span></td><td>52</td></tr>
+                    <tr><td>3</td><td><span class="easter-egg-link" onclick="showEgg('rodri')">Rodri</span></td><td>50</td></tr>
+                    <tr><td>4</td><td><span class="easter-egg-link" onclick="showEgg('fran')">Fran</span></td><td>47</td></tr>
+                    <tr><td>5</td><td><span class="easter-egg-link" onclick="showEgg('rolex')">Rolex</span></td><td>40</td></tr>
+                    <tr><td>6</td><td><span class="easter-egg-link" onclick="showEgg('carlitos')">Carlitos</span></td><td>35</td></tr>
+                    <tr><td>7</td><td><span class="easter-egg-link" onclick="showEgg('niko')">Niko</span></td><td>22</td></tr>
                 </tbody>
             </table>
-            <div class="info-box">
-                La tabla anual premia la constancia de todo el año calendario combinando los resultados del Apertura, las zonas del Mundialito y lo que va del Clausura.
-            </div>
-        </div>
 
-        <!-- ANUAL 2025 -->
-        <div id="anual2025" class="tab-content">
-            <h2>Torneo Anual 2025</h2>
-            <div class="podium-box">
-                <div class="podium-card silver">
-                    <h3>🥈 Subcampeón</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('rodri')">Rodri</span> (19 pts)</div>
-                </div>
-                <div class="podium-card gold">
-                    <h3>🥇 Campeón</h3>
-                    <div class="name">Iván (21 pts)</div>
-                </div>
-                <div class="podium-card bronze">
-                    <h3>🥉 3er Puesto</h3>
-                    <div class="name"><span class="easter-egg-link" onclick="openEgg('enzo')">Enzo</span> (18 pts)</div>
-                </div>
-            </div>
-
-            <div class="info-box">
-                El primer gran torneo con el que dio inicio la historia de La Liga Silvestre bajo un formato anual de punta a punta, consagrando a Iván en la cima de la tabla general.
-            </div>
-        </div>
-
-        <!-- SUPERCOPAS -->
-        <div id="supercopas" class="tab-content">
-            <h2>Sección Supercopas</h2>
-            
             <div class="supercopa-card">
-                <h3>🏆 Supercopa 2025</h3>
-                <p>Disputada mano a mano entre los dos mejores del torneo anual. El ganador y campeón de la Supercopa fue <strong>Iván</strong>.</p>
-            </div>
-
-            <div class="supercopa-card" style="border-color: var(--text-muted);">
-                <h3 style="color: var(--text-muted);">🏆 Supercopa 2026</h3>
-                <p>Enfrentará al campeón del Torneo Apertura y al campeón del Torneo Clausura de este año.</p>
-                <p style="font-size: 1.2rem; color: var(--bright-green); margin-top: 10px;"><strong>Estado:</strong> A disputarse</p>
+                <h3>🏆 Supercopa Silvestre 🏆</h3>
+                <p style="color: var(--text-muted); margin-bottom: 5px;">Gran Final de Temporada</p>
+                <p style="font-size: 1.2rem; font-weight: bold; color: var(--text-main);">Bauti vs. Enzo</p>
+                <p style="color: var(--bright-green); font-weight: bold; margin-top: 8px;">¡Campeón Anual: Bauti!</p>
             </div>
         </div>
     </main>
 
-    <!-- Modal Dinámico para Easter Eggs -->
-    <div id="easterEggModal" class="modal-overlay" onclick="closeModal()">
+    <!-- Modal de Easter Eggs -->
+    <div id="eggModal" class="modal-overlay" onclick="closeEgg()">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <div id="modalBody"></div>
-            <button class="close-btn" onclick="closeModal()">Cerrar</button>
+            <h3 id="eggTitle">Easter Egg</h3>
+            <div class="modal-text" id="eggMessage">Mensaje secreto</div>
+            <button class="close-btn" onclick="closeEgg()">Cerrar</button>
         </div>
     </div>
 
@@ -524,56 +467,28 @@
             evt.currentTarget.classList.add("active");
         }
 
-        function openEgg(character) {
-            const modalBody = document.getElementById("modalBody");
-            let contentHTML = "";
+        const easterEggs = {
+            bauti: { title: "Bauti 👑", msg: "¡El terror de las redes! Siempre candidato." },
+            enzo: { title: "Enzo 🧠", msg: "El cerebro táctico y programador de la liga." },
+            rodri: { title: "Rodri ⚡", msg: "¡Correcaminos inagotable por la banda!" },
+            fran: { title: "Fran 🎯", msg: "Precisión quirúrgica y goles picantes." },
+            rolex: { title: "Rolex ⌚", msg: "Precisión suiza dentro de la cancha." },
+            carlitos: { title: "Carlitos 🔥", msg: "Garra, entrega y alegría en el vestuario." },
+            niko: { title: "Chiqui Niko 🪄", msg: "El creador supremo de los torneos. ¡No trates de entenderlo!" }
+        };
 
-            if (character === 'bauti') {
-                contentHTML = `
-                    <h3>Bauti</h3>
-                    <div class="modal-text" style="font-size: 2.5rem;">🦍🪖</div>
-                `;
-            } else if (character === 'enzo') {
-                contentHTML = `
-                    <div style="font-size: 3rem; margin-bottom: 5px;">👑</div>
-                    <h3>Enzo</h3>
-                    <div class="modal-text">👑</div>
-                `;
-            } else if (character === 'rodri') {
-                contentHTML = `
-                    <h3>Rodri</h3>
-                    <div class="modal-text" style="font-size: 1.1rem; line-height: 1.4;">El Principe que NO pudo ser Rey</div>
-                `;
-            } else if (character === 'fran') {
-                contentHTML = `
-                    <h3>Fran</h3>
-                    <div class="modal-text" style="font-size: 2rem;">🔪🐷🐷</div>
-                `;
-            } else if (character === 'rolex') {
-                contentHTML = `
-                    <h3>Rolex</h3>
-                    <div class="modal-text" style="font-size: 2.5rem;">⌚️</div>
-                `;
-            } else if (character === 'carlitos') {
-                contentHTML = `
-                    <h3>Carlitos</h3>
-                    <div class="modal-text" style="font-size: 1.3rem; color: var(--bright-green);">CARLITOOOOOS</div>
-                `;
-            } else if (character === 'niko') {
-                contentHTML = `
-                    <h3>Niko</h3>
-                    <div class="modal-text" style="font-size: 1.2rem; color: var(--bright-green);">El Arquitecto Chiqui</div>
-                `;
+        function showEgg(player) {
+            const egg = easterEggs[player];
+            if (egg) {
+                document.getElementById("eggTitle").innerText = egg.title;
+                document.getElementById("eggMessage").innerText = egg.msg;
+                document.getElementById("eggModal").style.display = "flex";
             }
-
-            modalBody.innerHTML = contentHTML;
-            document.getElementById("easterEggModal").style.display = "flex";
         }
 
-        function closeModal() {
-            document.getElementById("easterEggModal").style.display = "none";
+        function closeEgg() {
+            document.getElementById("eggModal").style.display = "none";
         }
     </script>
-
 </body>
 </html>
